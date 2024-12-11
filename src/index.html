@@ -103,20 +103,24 @@
             <input type="text" id="q23" name="q23">
         </div>     
         <div>
-            <p>24. Tiny Soccer?</p>
+            <p>24. Shake and Draw?</p>
             <input type="text" id="q24" name="q24">
-        </div>     
+        </div>            
         <div>
-            <p>25. Spring Race?</p>
+            <p>25. Tiny Soccer?</p>
             <input type="text" id="q25" name="q25">
         </div>     
         <div>
-            <p>26. Vicar and Horse War?</p>
+            <p>26. Spring Race?</p>
             <input type="text" id="q26" name="q26">
         </div>     
         <div>
-            <p>27. Cheese Race?</p>
+            <p>27. Vicar and Horse War?</p>
             <input type="text" id="q27" name="q27">
+        </div>     
+        <div>
+            <p>28. Cheese Race?</p>
+            <input type="text" id="q28" name="q28">
         </div>     
 
         <button type="button" onclick="checkAnswers()">Submit</button>
@@ -150,10 +154,11 @@
                 q21: ["action man", "actionman"],
                 q22: ["rubik", "rubik cube", "rubiks cube", "rubik's cube"],
                 q23: ["tiny tears", "tinytears"],
-                q24: ["subbuteo"],
-                q25: ["slinky"],
-                q26: ["chess"],
-                q27: ["trivial pursuit", "trivialpursuit"]
+                q24: ["etchasketch","etch-a-sketch"],
+                q25: ["subbuteo"],
+                q26: ["slinky"],
+                q27: ["chess"],
+                q28: ["trivial pursuit", "trivialpursuit"]
             };
 
             if (answers.q1.includes(document.getElementById('q1').value.toLowerCase())) {
@@ -235,6 +240,9 @@
                 correctAnswers++;
             }  
             if (answers.q27.includes(document.getElementById('q27').value.toLowerCase())) {
+                correctAnswers++;
+            }  
+            if (answers.q28.includes(document.getElementById('q28').value.toLowerCase())) {
                 correctAnswers++;
             }  
             
