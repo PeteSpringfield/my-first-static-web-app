@@ -107,8 +107,12 @@
             <input type="text" id="q24" name="q24">
         </div>     
         <div>
-            <p>25. Cheese Race?</p>
+            <p>25. Vicar and Horse War?</p>
             <input type="text" id="q25" name="q25">
+        </div>     
+        <div>
+            <p>26. Cheese Race?</p>
+            <input type="text" id="q26" name="q26">
         </div>     
 
         <button type="button" onclick="checkAnswers()">Submit</button>
@@ -143,7 +147,8 @@
                 q22: ["tiny tears", "tinytears"],
                 q23: ["subbuteo"],
                 q24: ["slinky"],
-                q25: ["trivial pursuit", "trivialpursuit"]
+                q25: ["Chess"],
+                q26: ["trivial pursuit", "trivialpursuit"]
             };
 
             if (answers.q1.includes(document.getElementById('q1').value.toLowerCase())) {
@@ -221,7 +226,10 @@
             if (answers.q25.includes(document.getElementById('q25').value.toLowerCase())) {
                 correctAnswers++;
             }  
-          
+            if (answers.q25.includes(document.getElementById('q26').value.toLowerCase())) {
+                correctAnswers++;
+            }  
+            
             document.getElementById('result').innerText = "You got " + correctAnswers + " out of 25 correct!";
         }
     </script>
