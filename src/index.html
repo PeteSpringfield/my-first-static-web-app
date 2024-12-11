@@ -122,7 +122,15 @@
             <p>28. Cheese Race?</p>
             <input type="text" id="q28" name="q28">
         </div>     
-
+        <div>
+            <p>29. Four in a Line?</p>
+            <input type="text" id="q29" name="q29">
+        </div>  
+        <div>
+            <p>30. Guess The Colours?</p>
+            <input type="text" id="q30" name="q30">
+        </div>  
+        
         <button type="button" onclick="checkAnswers()">Submit</button>
     </form>
     <p id="result"></p>
@@ -158,7 +166,9 @@
                 q25: ["subbuteo"],
                 q26: ["slinky"],
                 q27: ["chess"],
-                q28: ["trivial pursuit", "trivialpursuit"]
+                q28: ["trivial pursuit", "trivialpursuit"],
+                q29: ["connect four", "connect 4"],
+                q30: ["mastermind"]
             };
 
             if (answers.q1.includes(document.getElementById('q1').value.toLowerCase())) {
@@ -245,8 +255,14 @@
             if (answers.q28.includes(document.getElementById('q28').value.toLowerCase())) {
                 correctAnswers++;
             }  
+            if (answers.q29.includes(document.getElementById('q29').value.toLowerCase())) {
+                correctAnswers++;
+            }  
+            if (answers.q30.includes(document.getElementById('q30').value.toLowerCase())) {
+                correctAnswers++;
+            }  
             
-            document.getElementById('result').innerText = "You got " + correctAnswers + " out of 25 correct!";
+            document.getElementById('result').innerText = "You got " + correctAnswers + " out of 30 correct!";
         }
     </script>
 </body>
