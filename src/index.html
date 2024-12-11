@@ -1,17 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Revised Test App</title>
+    <title>The Great Knockoff Quiz</title>
 </head>
-
 <body>
-  <main>
-    <h1>Revised Test App</h1>
-  </main>
-</body>
+    <h1>The Great Knockoff Quiz</h1>
+    <h2>A quiz all about the fake toys found in shops and dodgy Christmas markets at this time of year</h2>
+  <h2> Each question offers the dubious translation shown on the box </h2>
+   
+  <h2>Cast your mind back and enter the proper name of the toy or game
+    <form id="quizForm">
+        <div>
+            <p>1. Serpents and Elevators?</p>
+            <input type="text" id="q1" name="q1">
+        </div>
+        <div>
+            <p>2. Disobedient Donkey?</p>
+            <input type="text" id="q2" name="q2">
+        </div>
+        <div>
+            <p>3. Marble Drop?</p>
+            <input type="text" id="q3" name="q3">
+        </div>
+        <div>
+            <p>4. Windy Board?</p>
+            <input type="text" id="q4" name="q4">
+        </div>
+        <div>
+            <p>5. Successful Couple?</p>
+            <input type="text" id="q5" name="q5">
+        </div>
+        <div>
+            <p>6. Greedy Landlord?</p>
+            <input type="text" id="q6" name="q6">
+        </div>
+        <div>
+            <p>7. Fighting Mystery Craft?</p>
+            <input type="text" id="q7" name="q7">
+        </div>
+        <div>
+            <p>8. Asian Quality Operatives?</p>
+            <input type="text" id="q8" name="q8">
+        </div>
+        <div>
+            <p>9. Rodent Remover?</p>
+            <input type="text" id="q9" name="q9">
+        </div>
+        <div>
+            <p>10. Sticky Fun?</p>
+            <input type="text" id="q10" name="q10">
+        </div>
+        <div>
+            <p>11. Pull it Out?</p>
+            <input type="text" id="q11" name="q11">
+        </div>
+        <div>
+            <p>12. Grab and Squabble?</p>
+            <input type="text" id="q12" name="q12">
+        </div>
+        <div>
+            <p>13. Lie to your Friends?</p>
+            <input type="text" id="q13" name="q13">
+        </div>
+        <div>
+            <p>14. Cloth Pictures?</p>
+            <input type="text" id="q14" name="q14">
+        </div>
+        <div>
+            <p>15. Geometry Pens?</p>
+            <input type="text" id="q15" name="q15">
+        </div>
+        <div>
+            <p>16. Expensive Brickwork?</p>
+            <input type="text" id="q16" name="q16">
+        </div>
+        <div>
+            <p>17. Creature Cards?</p>
+            <input type="text" id="q17" name="q17">
+        </div>
+        <div>
+            <p>18. Clunky World Game?</p>
+            <input type="text" id="q18" name="q18">
+        </div>
+        <div>
+            <p>19. Don't Fall Down?</p>
+            <input type="text" id="q19" name="q19">
+        </div>
+        <div>
+            <p>20. Agressive Male?</p>
+            <input type="text" id="q20" name="q20">
+        </div>     
+        <div>
+            <p>21. Square Puzzle?</p>
+            <input type="text" id="q21" name="q21">
+        </div>     
+          <div>
+            <p>22. Miserable Baby?</p>
+            <input type="text" id="q22" name="q22">
+        </div>     
+        <div>
+            <p>23. Tiny Soccer?</p>
+            <input type="text" id="q23" name="q23">
+        </div>     
+        <div>
+            <p>24. Spring Race?</p>
+            <input type="text" id="q24" name="q24">
+        </div>     
+        <div>
+            <p>25. Cheese Race?</p>
+            <input type="text" id="q25" name="q25">
+        </div>     
 
+        <button type="button" onclick="checkAnswers()">Submit</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function checkAnswers() {
+            var correctAnswers = 0;
+            var answers = {
+                q1: ["snakes and ladders", "snakes", "ladders"],
+                q2: ["buckaroo"],
+                q3: ["kerplunk"],
+                q4: ["drafts"],
+                q5: ["barbie and ken", "barbie & ken"],
+                q6: ["monopoly"],
+                q7: ["battleships"],
+                q8: ["chinese chequers", "chinese checkers"],
+                q9: ["mousetrap"],
+                q10: ["playdough", "play dough"],
+                q11: ["jenga"],
+                q12: ["snap"],
+                q13: ["charades"],
+                q14: ["fuzzy felt", "fuzzyfelt"],
+                q15: ["spirograph"],
+                q16: ["lego"],
+                q17: ["pokemon"],
+                q18: ["minecraft"],
+                q19: ["twister"],
+                q20: ["action man", "actionman"],
+                q21: ["rubik", "rubik cube", "rubiks cube", "rubik's cube"],
+                q22: ["tiny tears", "tinytears"],
+                q23: ["subbuteo"],
+                q24: ["slinky"],
+                q25: ["trivial pursuit", "trivialpursuit"]
+            };
+
+            if (answers.q1.includes(document.getElementById('q1').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q2.includes(document.getElementById('q2').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q3.includes(document.getElementById('q3').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q4.includes(document.getElementById('q4').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q5.includes(document.getElementById('q5').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q6.includes(document.getElementById('q6').value.toLowerCase())) {
+                correctAnswers++;
+            }   
+            if (answers.q7.includes(document.getElementById('q7').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q8.includes(document.getElementById('q8').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q9.includes(document.getElementById('q9').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q10.includes(document.getElementById('q10').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q11.includes(document.getElementById('q11').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q12.includes(document.getElementById('q12').value.toLowerCase())) {
+                correctAnswers++;
+            }   
+            if (answers.q13.includes(document.getElementById('q13').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q14.includes(document.getElementById('q14').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q15.includes(document.getElementById('q15').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q16.includes(document.getElementById('q16').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q17.includes(document.getElementById('q17').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q18.includes(document.getElementById('q18').value.toLowerCase())) {
+                correctAnswers++;
+            }   
+            if (answers.q19.includes(document.getElementById('q19').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q20.includes(document.getElementById('q20').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q21.includes(document.getElementById('q21').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q22.includes(document.getElementById('q22').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q23.includes(document.getElementById('q23').value.toLowerCase())) {
+                correctAnswers++;
+            }
+            if (answers.q24.includes(document.getElementById('q24').value.toLowerCase())) {
+                correctAnswers++;
+            }  
+            if (answers.q25.includes(document.getElementById('q25').value.toLowerCase())) {
+                correctAnswers++;
+            }  
+          
+            document.getElementById('result').innerText = "You got " + correctAnswers + " out of 25 correct!";
+        }
+    </script>
+</body>
 </html>
