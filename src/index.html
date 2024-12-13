@@ -266,5 +266,20 @@
         
           }
     </script>
+              <button type="button" onclick="displayAnswers()">Show me the answers</button>
+
+      <p id="ansbank1"></p>
+      <p id="ansbank2"></p>
+      
+      <script>
+          function displayanswers() {
+              var ans = {
+                  a1: ["Snakes and Ladders",
+                  a2: ["Buckaroo"]
+                       };
+              document.getElementById('ansbank1').innerText = "The answer to question one is " + ans.a1;
+              document.getElementById('ansbank2').innerText = "The answer to question one is " + ans.a2;
+          }
+      </script>
 </body>
 </html>
